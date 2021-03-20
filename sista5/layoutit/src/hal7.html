@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Halaman Admin Kelola Daftar Seminar TA</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Ini website">
+    <link href="12.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <script >
+    	function addTable(a, b, c, d, e, f, g, h,) {
+    		document.write(`
+    		<tr class="table-data">
+    			<td>${a}</td>
+    			<td>${b}</td>
+    			<td>${c}</td>
+    			<td>${d}</td>
+    			<td>${e}</td>
+    			<td>${f}</td>
+    			<td>${g}</td>
+    			<td><a href="#">Edit</a><a href="#">Delete</a></td>	
+			</tr>
+			`);
+     	}
+    </script>
+</head>
+<body>
+	<div class="header">
+        <h2>Sistem Informasi Seminar Tugas Akhir</h2>
+        <button id="toggle-navigasi" onclick="toggleNavigasi()">
+            <span class="material-icons">menu</span>
+        </button>
+        <div class="navigasi hidden" id="navigasi">
+            <div class="link-container">
+            <a href="#">Home</a>
+            <a href="#">Jadwal</a>
+            <a href="#">Daftar Seminar</a>
+            <a href="#">Berita</a>
+            <a href="#">Admin</a>
+            <a href="#">Logout</a>
+            <a href="#" id="tutup" onclick="toggleNavigasi()">Tutup</a>
+            </div>
+        </div>
+    </div>
+
+    <table>
+    	<tr>
+    		<th>No</th>
+    		<th>Nim</th>
+    		<th>Mahasiswa</th>
+    		<th>Seminar</th>
+    		<th>Waktu</th>
+    		<th>Ruangan</th>
+    		<th>Peserta</th>
+    		<th>Action</th>
+    	</tr>
+    	<script>
+    		addTable('1', '0102001', 'Diego Armada', 'Proposal',
+    			'10:00 04-01-2021', 'Online', '10');
+    		addTable('2', '0102002', 'Ahmad Budiman', 'Seminar Hasil',
+    			'10:00 04-01-2021', 'Online', '10');
+    		addTable('3', '0102021', 'Fredelina Putri', 'Seminar Akhir',
+    			'10:00 04-01-2021', 'B2304', '0');
+    		
+
+    	</script>
+    </table>
+
+    <script >
+    	function toggleNavigai() {
+    		const navigasi = document.getElementById('navigasi');
+    		navigasi.classlist.toggle('hidden');
+    	}
+    </script>
+    
+</body>
+</html>
